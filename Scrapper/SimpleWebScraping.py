@@ -76,7 +76,10 @@ def review_scraper(url):
   return Reviews
 
 #paste/replace the url to the first page of the company's Glassdoor review in between the ""
-input_url="https://www.glassdoor.sg/Reviews/Shopee-Reviews-E1263091"
+# input_url="https://www.glassdoor.sg/Reviews/Shopee-Reviews-E1263091" Shopee URL
+# input_url="https://www.glassdoor.sg/Reviews/Lazada-Reviews-E578726" Lazada URL
+input_url="https://www.glassdoor.sg/Reviews/Lazada-Reviews-E578726"
+
 
 # input_url+"_P"+str(x)+".htm?sort.sortType=RD&sort.ascending=false"
 
@@ -117,4 +120,4 @@ for x in range(2,maxPage):
 
 #display the output
 print(output.to_string())
-output.to_csv("Shopee_Review.csv", sep="\t")
+output.to_csv("Lazada_Review.csv", sep="\t")
