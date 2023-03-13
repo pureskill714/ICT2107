@@ -13,7 +13,7 @@ def review_scraper(url):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'}
     req = Request(url, headers=hdr)
     page = urlopen(req)
-    time.sleep(10)
+    #time.sleep(10)
     soup = BeautifulSoup(page, "html.parser")
 
 
@@ -70,4 +70,5 @@ def review_scraper(url):
 url_root1 = 'https://www.glassdoor.com/Overview/Working-at-Amazon-EI_IE6036.11,17.htm'
 url_root2 = 'https://www.glassdoor.com/Overview/Working-at-Deloitte-EI_IE2763.11,19.htm'
 url_root3 = 'https://www.glassdoor.com/Overview/Working-at-McDonald-s-EI_IE432.11,21.htm'
-review_scraper(url_root1)
+url_root4 = 'https://www.glassdoor.sg/Reviews/AmerisourceBergen-Reviews-E2703.htm'
+review_scraper(url_root4)
