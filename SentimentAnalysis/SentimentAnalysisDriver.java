@@ -5,6 +5,8 @@ import java.net.URI;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -19,20 +21,17 @@ public class SentimentAnalysisDriver {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "SentimentAnalysis Preprocessing");
+        Job job = Job.getInstance(conf, "SentimentAnalysis");
         job.setJarByClass(SentimentAnalysisDriver.class);
         job.setMapperClass(SentimentAnalysisMapper.class);
-        job.setNumReduceTasks(0);
+        job.setReducerClass(SentimentAnalysisReducer.class);
+        job.setNumReduceTasks(1);
 
-        job.setMapOutputKeyClass(NullWritable.class);
-        job.setOutputValueClass(Text.class);
-        job.setOutputKeyClass(NullWritable.class);
-        job.setOutputValueClass(Text.class);
+        job.setMapOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
 
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
-
-
 
         try{
 
@@ -52,16 +51,5 @@ public class SentimentAnalysisDriver {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }

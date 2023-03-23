@@ -21,7 +21,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,NullWritable,Text> {
+public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,Text,IntWritable> {
     Map<String, String> dictionary = null;
 
     @Override
@@ -64,7 +64,7 @@ public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,NullWritab
             }
 
         }
-        context.write(NullWritable.get(),new Text(String.valueOf(sentiment_value)));
+        context.write(new Text(line),new IntWritable(sentiment_value));
 
     }
 }
