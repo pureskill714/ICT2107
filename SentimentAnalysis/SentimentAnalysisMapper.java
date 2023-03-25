@@ -2,17 +2,14 @@ import java.io.*;
 import java.util.*;
 import java.net.URI;
 
-import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.*;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.commons.lang3.StringUtils;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -21,7 +18,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,Text,IntWritable> {
+public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,Text,DoubleWritable> {
     Map<String, String> dictionary = null;
 
     @Override
@@ -53,6 +50,7 @@ public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,Text,IntWr
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         //String fileName = ((FileSplit) context.getInputSplit()).getPath().getName();
         String line = value.toString().trim();
+        line = StopWordsRemover.remove(line);
         String[] words = line.split("\\s+");
         int sentiment_value= 0;
         for(String temp:words)
@@ -64,7 +62,7 @@ public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,Text,IntWr
             }
 
         }
-        context.write(new Text(line),new IntWritable(sentiment_value));
+        context.write(new Text(line),new DoubleWritable(sentiment_value));
 
     }
 }

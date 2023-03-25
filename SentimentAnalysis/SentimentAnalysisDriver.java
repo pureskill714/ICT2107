@@ -8,6 +8,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
@@ -24,11 +25,11 @@ public class SentimentAnalysisDriver {
         Job job = Job.getInstance(conf, "SentimentAnalysis");
         job.setJarByClass(SentimentAnalysisDriver.class);
         job.setMapperClass(SentimentAnalysisMapper.class);
-        job.setReducerClass(SentimentAnalysisReducer.class);
-        job.setNumReduceTasks(1);
+        //job.setReducerClass(SentimentAnalysisReducer.class);
+        job.setNumReduceTasks(0);
 
         job.setMapOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(DoubleWritable.class);
 
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
@@ -36,7 +37,7 @@ public class SentimentAnalysisDriver {
         try{
 
             //adding file to distributed cache
-            job.addCacheFile(new URI("hdfs://hadoop-master:9000/user/ict1501918/cache/AFINN-en-165.txt"));
+            job.addCacheFile(new URI("hdfs://localhost:9000/user/vboxuser/cache/AFINN-en-165.txt"));
         }catch(Exception e)
         {
             System.out.println("file not added");
