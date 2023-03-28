@@ -1,70 +1,57 @@
-import java.io.*;
-import java.util.*;
-import java.net.URI;
+package org.example;
 
-import org.apache.hadoop.io.NullWritable;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.commons.lang3.StringUtils;
-
-import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.FileSplit;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class SentimentAnalysisMapper extends Mapper<LongWritable,Text,NullWritable,Text> {
-    Map<String, String> dictionary = null;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
 
-    @Override
-    protected void setup(Context context) throws IOException, InterruptedException {
-        dictionary = new HashMap<String, String>();
-        URI[] cacheFiles = context.getCacheFiles();
+public class SentimentAnalysisMapper extends Mapper<Text, Text, Text, Text> {
+    private Map<String, Integer> afinn;
 
-        if (cacheFiles != null && cacheFiles.length > 0) {
-            try {
-                String line = "";
-                FileSystem fs = FileSystem.get(context.getConfiguration());
-                Path path = new Path(cacheFiles[0].toString());
-                BufferedReader reader = new BufferedReader(new InputStreamReader(fs.open(path)));
-
+    public void setup(Context context) throws IOException, InterruptedException {
+        // Read AFINN file
+        afinn = new HashMap<String, Integer>();
+        Path[] afinnFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
+        for (Path afinnFile : afinnFiles) {
+            if (afinnFile.getName().equals("AFINN-en-165.txt")) {
+                BufferedReader reader = new BufferedReader(new FileReader(afinnFile.toString()));
+                String line;
                 while ((line = reader.readLine()) != null) {
                     String[] tokens = line.split("\t");
-                    dictionary.put(tokens[0], tokens[1]);
+                    afinn.put(tokens[0], Integer.parseInt(tokens[1]));
                 }
-
-            } catch (Exception e) {
-                System.out.println("Unable to read the cached filed");
-                System.exit(1);
+                reader.close();
             }
         }
 
     }
 
-    @Override
-    public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        //String fileName = ((FileSplit) context.getInputSplit()).getPath().getName();
-        String line = value.toString().trim();
-        String[] words = line.split("\\s+");
-        int sentiment_value= 0;
-        for(String temp:words)
-        {
-            if(dictionary.containsKey(temp))
-            {
-                sentiment_value+=Long.parseLong(dictionary.get(temp));
+    public void map(Text key, Text value, Context context) throws IOException, InterruptedException {
 
+        String[] words = value.toString().trim().split("\\s+");
+        int sentimentScore = 0;
+        for (String word : words) {
+            if (afinn.containsKey(word)) {
+                sentimentScore += afinn.get(word);
             }
 
         }
-        context.write(NullWritable.get(),new Text(String.valueOf(sentiment_value)));
+        String sentiment = "neutral";
+        if (sentimentScore > 0) {
+            sentiment = "positive";
+        } else if (sentimentScore < 0) {
+            sentiment = "negative";
+        }
+        context.write(key, new Text(sentiment + "\t" + sentimentScore));
 
+        //debugging stuff
+        System.out.println(sentimentScore);
     }
 }
