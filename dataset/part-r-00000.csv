@@ -1,0 +1,46 @@
+Job Title,Positive,Negative,Neutral,Total Score,Overall Sentiment
+actuarial analyst,2,0,1,11,positive
+aia wealth management position,0,0,1,0,neutral
+analyst,1,1,0,5,neutral
+anonymous employee,1,0,0,6,positive
+anonymous intern,1,0,0,2,positive
+anonymous temporary employee,1,0,0,2,positive
+assistant manager,1,1,0,0,neutral
+bdm manager,1,0,0,2,positive
+brand analyst,1,0,0,4,positive
+business analyst,1,0,0,4,positive
+busniessanalyst and marketing manager,0,1,0,-3,negative
+consultant,1,1,1,2,neutral
+customer service,1,0,0,2,positive
+executive,2,0,0,19,positive
+financial adviser,0,1,0,-1,negative
+financial advisor,4,4,1,11,neutral
+financial consultant,3,1,0,9,positive
+financial representative,1,0,0,1,positive
+financial sales consultant  fsc ,1,0,0,5,positive
+financial service consultant,0,0,1,0,neutral
+financial services consultant,1,3,2,-18,negative
+financial services representative,2,0,1,10,positive
+fsc,1,0,0,1,positive
+human resources assistant,0,1,0,-2,negative
+insurance agent,1,0,0,8,positive
+internship,1,0,0,2,positive
+licensed financial services representative,1,0,0,8,positive
+marketing specialist,1,0,0,4,positive
+operations,1,0,0,2,positive
+policy service specialist,1,0,0,1,positive
+policy servicing,1,0,0,2,positive
+pricing actuary,1,1,0,2,neutral
+relationship manager,0,0,1,0,neutral
+sales,1,0,0,2,positive
+sales   marketing,1,0,0,4,positive
+sales associate,1,0,0,2,positive
+sales manager,0,1,0,-2,negative
+senior financial consultant,0,0,1,0,neutral
+senior manager,1,0,0,1,positive
+specialist,0,1,0,-2,negative
+team lead,0,1,0,-1,negative
+technical analyst,0,1,0,-2,negative
+telemarketer,0,0,1,0,neutral
+telesales executive,0,0,1,0,neutral
+test analyst,1,0,0,2,positive
