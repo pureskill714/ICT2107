@@ -28,7 +28,7 @@ whatever csv file youre trying to process
   
 ![image](https://user-images.githubusercontent.com/73429081/228126269-7c2afd7f-0e8e-4b32-b9d4-709cce0bb8d9.png)  
   
-Double check that the data is in this format with the front blank header removed  
+Double check that the data is in this format with the front blank header column removed  
   
 ![image](https://user-images.githubusercontent.com/73429081/228126704-75fce0fb-2a3e-4223-9059-ae92d5968c27.png)  
   
