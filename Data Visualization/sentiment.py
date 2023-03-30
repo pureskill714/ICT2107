@@ -19,9 +19,9 @@ st.bar_chart(lazada_sentiment)
 # }
 
 #To read csv file from project file
-df2 = pd.read_csv('dataset/part-r-00000.csv')
-# df = pd.DataFrame(data)
-# st.dataframe(df)
+df2 = pd.read_csv('results/AIA-NLP.csv')
+df = pd.DataFrame(data)
+st.dataframe(df)
 
 #To diplay columns and tables
 st.dataframe(df2)
@@ -50,9 +50,9 @@ st.plotly_chart(fig2,use_container_width=True)
 #
 # fig = px.pie(df,)
 
-shopee_sentiment = {"Shopee Sentiment":["Positive","Negative","Neutral"], "Value":[100,100,100]}
-st.write(shopee_sentiment)
-shopee_sentiment = pd.DataFrame(shopee_sentiment)
-shopee_sentiment = shopee_sentiment.set_index("Shopee Sentiment")
-st.write(shopee_sentiment)
-st.bar_chart(shopee_sentiment)
+#shopee_sentiment = {"Shopee Sentiment":["Positive","Negative","Neutral"], "Value":[100,100,100]}
+#st.write(shopee_sentiment)
+#shopee_sentiment = pd.DataFrame(shopee_sentiment)
+#shopee_sentiment = shopee_sentiment.set_index("Shopee Sentiment")
+#st.write(shopee_sentiment)
+#st.bar_chart(shopee_sentiment)

@@ -1,0 +1,138 @@
+Job Title,Positive,Negative,Neutral,Total Score,Overall Sentiment
+apac services marketing strategy director ,6,0,3,3,Positive
+business group lead  data   ai ,0,0,0,1,Negative
+"senior director sales 	",0,0,0,3,Positive
+well known,1,0,0,3,Positive
+account executive,0,0,1,2,Neutral
+account manager,1,0,0,3,Positive
+account technology strategist,1,0,0,3,Positive
+account technology strategist  ats ,1,0,0,3,Positive
+"administrative	",1,0,0,3,Positive
+administrative executive,0,0,1,2,Neutral
+analyst,0,0,1,2,Neutral
+anonymous contractor,1,0,1,3,Positive
+anonymous employee,2,0,6,2,Neutral
+anonymous intern,8,0,2,3,Positive
+anonymous temporary employee,1,1,1,2,Neutral
+architect,0,0,1,2,Neutral
+assistant accountant executive,0,0,1,3,Positive
+assistant transaction specialist,0,0,1,2,Neutral
+associate product manager,0,0,1,2,Neutral
+audience manager,0,0,1,2,Neutral
+"audience marketing manager	",1,0,0,3,Positive
+"biz development	",1,0,0,3,Positive
+"business consultant	",0,0,1,2,Neutral
+"business leader	",1,0,0,3,Positive
+"business manager	",1,0,0,3,Positive
+"business operations analyst	",1,0,0,3,Positive
+"business operations manager	",0,0,1,2,Neutral
+"business program management	",1,0,0,3,Positive
+business program manager,0,0,1,2,Neutral
+"chief technology officer	",2,0,1,3,Positive
+"cloud solution architect	",0,1,0,1,Negative
+"commercial executive	",1,0,1,3,Positive
+"compliance analyst	",0,0,1,2,Neutral
+"compliance manager	",0,0,1,2,Neutral
+"consultant	",1,0,0,3,Positive
+"customer engineer	",1,0,0,3,Positive
+"customer success manager	",1,1,0,2,Neutral
+cyber security engineer,2,0,1,3,Positive
+"data analyst	",0,0,1,2,Neutral
+"data center technician	",0,0,1,2,Neutral
+data scientist,1,0,0,3,Positive
+"datacenter technician	",1,0,1,3,Positive
+"digital advisor	",1,0,0,3,Positive
+director,1,0,0,3,Positive
+"director of business development	",9,0,1,3,Positive
+engagement specialist,0,0,0,3,Positive
+"engineer	",1,0,0,3,Positive
+"engineering manager	",1,1,0,2,Neutral
+"executive	",0,0,1,2,Neutral
+executive administrative,1,0,0,3,Positive
+"executive administrative assistant	",0,0,1,2,Neutral
+"executive assistant	",1,0,0,3,Positive
+finance,2,1,0,2,Neutral
+"finance controller	",0,0,1,2,Neutral
+"financial account analyst	",1,0,0,3,Positive
+"freelancer	",0,1,0,1,Negative
+"global support specialist	",0,0,1,2,Neutral
+"human resources	",1,0,1,3,Positive
+"human resources leader	",0,1,0,1,Negative
+"human resources manager	",0,0,1,2,Neutral
+"industry advisor	",1,0,0,3,Positive
+"industry market development manager	",0,0,1,2,Neutral
+"intern	",0,0,0,3,Positive
+"it project manager	",2,0,0,3,Positive
+"it systems specialist	",0,1,0,1,Negative
+"manager	",0,0,1,2,Neutral
+"marketing	",0,0,1,3,Positive
+"marketing director	",1,0,1,3,Positive
+marketing manager,1,0,0,3,Positive
+"marketing program manager	",2,0,0,3,Positive
+"marketing specialist	",1,0,0,3,Positive
+"mba candidate	",0,0,1,2,Neutral
+"mfg engineer ii	",1,0,0,3,Positive
+"ml ai engineer	",0,0,1,2,Neutral
+operation specialist,0,0,1,2,Neutral
+operations analyst,1,0,0,3,Positive
+operations management,0,0,1,2,Neutral
+operations manager,1,0,0,3,Positive
+operations program manager,1,0,0,3,Positive
+operations project manager,1,1,0,2,Neutral
+operations specialist,0,0,1,2,Neutral
+partner channel marketing manager,2,0,0,3,Positive
+planner,0,0,1,2,Neutral
+premier field engineer,1,0,0,3,Positive
+principal software engineer,1,0,0,3,Positive
+product marketing,1,0,0,3,Positive
+product marketing manager,0,0,0,3,Positive
+program manager,2,0,0,3,Positive
+programmer analyst,3,1,0,3,Positive
+project manager,1,0,0,3,Positive
+regional marketing manager,3,0,1,3,Positive
+regional project manager,1,0,0,3,Positive
+regional sales director,0,0,0,3,Positive
+sales,1,0,0,3,Positive
+sales associate,2,0,0,3,Positive
+sales consultant,1,0,0,3,Positive
+sales desk associate,0,1,0,1,Negative
+sales director,0,0,1,2,Neutral
+sales manager,2,0,0,3,Positive
+sales operations manager,2,0,1,3,Positive
+sdm manager,0,0,1,2,Neutral
+secretary,1,0,0,3,Positive
+senior account manager,0,0,1,2,Neutral
+senior architect,1,0,0,3,Positive
+senior cloud solution architect,1,0,0,3,Positive
+senior compliance analyst,0,1,0,1,Negative
+senior consultant,0,0,1,2,Neutral
+senior customer engineer,1,0,0,3,Positive
+senior director,0,0,0,3,Positive
+senior finance manager,0,0,1,2,Neutral
+senior industry executive,1,0,0,3,Positive
+senior manager,1,0,0,3,Positive
+senior marketing manager,1,0,1,3,Positive
+"senior pfe	",1,0,0,3,Positive
+"senior process equipment engineer	",1,0,0,3,Positive
+"senior product manager	",1,0,0,3,Positive
+senior program manager,1,0,0,3,Positive
+"senior risk and compliance manager	",3,0,0,3,Positive
+senior software developer,0,0,1,2,Neutral
+senior supply chain manager,1,0,0,3,Positive
+"senior tam	",1,0,0,3,Positive
+"senior x manager	",1,0,0,3,Positive
+"software developer	",1,0,0,3,Positive
+software engineer,1,0,0,3,Positive
+"solution architect	",2,0,3,3,Positive
+"solution sales specialist	",0,0,0,3,Positive
+solutions architect,0,0,0,3,Positive
+solutions specialist,1,0,0,3,Positive
+summer intern,1,0,0,3,Positive
+"support analysis	",1,0,0,3,Positive
+ta lead,0,0,1,2,Neutral
+talent acquisition,1,0,0,3,Positive
+"technical account manager	",1,0,0,3,Positive
+technical specialist,1,0,0,3,Positive
+technology specialist,1,0,0,3,Positive
+training program manager,1,0,0,3,Positive
+,1,0,0,3,Positive

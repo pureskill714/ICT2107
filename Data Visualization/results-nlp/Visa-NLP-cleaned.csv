@@ -1,0 +1,35 @@
+Job Title,Positive,Negative,Neutral,Total Score,Overall Sentiment
+ sr director  technology ,1,0,0,3,Positive
+analyst,0,0,1,2,Neutral
+"anonymous employee	",1,0,0,3,Positive
+"associate analyst	",1,0,0,3,Positive
+"associate tech support analyst	",1,0,0,3,Positive
+business analyst,0,0,0,3,Positive
+"business associate	",1,0,0,3,Positive
+"contractor	",0,0,1,2,Neutral 
+"data analyst	",1,0,0,3,Positive
+"data scientist	",0,1,0,1,Negative
+director,1,1,0,2,Neutral
+"finance manager	",1,0,0,3,Positive
+"intern	",0,0,1,2,Neutral 
+"lead network analyst	",1,0,0,3,Positive
+lead recruitment co coordinator,1,0,0,3,Positive
+"manager	",1,0,1,3,Positive
+"people team	",1,0,0,3,Positive
+senior consultant,1,0,3,2,Neutral
+"senior consultant software engineer	",1,0,0,3,Positive
+"senior data engineer	",1,0,0,3,Positive
+"senior data scientist	",1,0,0,3,Positive
+"senior financial analyst	",1,0,0,3,Positive
+"senior software engineer	",2,1,1,3,Positive
+"senior systems engineer	",1,0,0,3,Positive
+"software engineer	",2,0,2,3,Positive
+"software engineer intern	",1,1,0,2,Neutral 
+"software engineer internship 	",1,0,0,3,Positive
+"software test engineer	",1,0,0,3,Positive
+"software test engineer qa engineer	",1,0,0,3,Positive
+"system analyst trainee	",0,1,0,1,Negative
+"technical product manager	",1,0,0,3,Positive
+"technical writer	",1,0,0,3,Positive
+"trainee	",1,0,1,3,Positive
+vice president,0,1,0,1,Negative

@@ -1,0 +1,75 @@
+Job Title,Positive,Neutral,Negative,Average Sentiment Score,Overall Sentiment
+ a self starter,1,0,0,3,Positive
+account executive,0,1,0,2,Neutral
+account health specialist,0,1,3,1,Negative
+account health support specialist,1,2,0,3,Positive
+account manager,1,0,1,2,Neutral
+account specialist,0,3,0,2,Neutral
+alliances manager,1,0,0,3,Positive
+anonymous employee,0,2,0,2,Neutral
+assistant vendor manager,1,0,0,3,Positive
+"associate	",3,0,0,3,Positive
+associate technical account manager,0,0,0,3,Positive
+associate vendor manager,0,2,0,2,Neutral
+aws cloud architect,0,0,0,3,Positive
+bd gtm specialist leader apj,1,0,0,3,Positive
+brand specialist svs,1,0,0,3,Positive
+category specialist,0,1,0,2,Neutral
+community marketing manager,0,0,0,3,Positive
+compensation specialist,0,1,0,2,Neutral
+customer service,1,1,0,3,Positive
+data center technician,0,1,0,2,Neutral
+dceo   eot ,0,0,0,3,Positive
+dceo facility engineer,0,1,0,1,Negative
+dco technician,1,0,0,3,Positive
+enterprise deal lead,1,0,0,3,Positive
+esm,1,0,0,3,Positive
+"field mechanical engineer	",0,0,1,1,Negative
+fulfillment associate,0,1,0,2,Neutral
+"global account manager	",1,0,0,3,Positive
+google ads specialist,0,1,0,2,Neutral
+head of bd,1,0,0,3,Positive
+hrbp,0,1,0,2,Neutral
+human resources,0,1,0,2,Neutral
+intern,2,0,0,3,Positive
+internship,1,0,0,3,Positive
+it support engineer,1,0,0,3,Positive
+mechanical engineer,1,0,0,3,Positive
+new account specialist,1,0,0,3,Positive
+onboarding specialist,1,0,0,3,Positive
+operation specialist,0,1,0,2,Neutral
+operations associate,0,0,1,1,Negative
+partner client architect,0,1,0,2,Neutral
+picker packer,0,0,1,1,Negative
+principal product manager,2,0,0,3,Positive
+program manager,1,1,0,3,Positive
+recruiter,0,1,0,2,Neutral
+recruitment coordinator,0,0,0,3,Positive
+research scientist,0,0,1,1,Negative
+risk manager,0,0,1,1,Negative
+risk specialist,0,0,1,1,Negative
+sales associate,0,0,1,1,Negative
+sales leader,1,0,0,3,Positive
+senior cloud architect,0,1,0,2,Neutral
+senior consultant,0,1,0,2,Neutral
+senior financial analyst,0,0,1,1,Negative
+senior operations executive,0,1,0,2,Neutral
+senior program manager,2,1,0,3,Positive
+senior program manager intern,0,1,0,2,Neutral
+senior solutions architect,0,1,0,2,Neutral
+smb sales representative,1,0,0,3,Positive
+software engineer,0,0,1,1,Negative
+solution architect,0,0,1,1,Negative
+solutions architect,3,0,0,3,Positive
+specialist,1,0,0,3,Positive
+strategy associate,0,1,0,2,Neutral
+team lead,0,1,1,2,Neutral
+technical program manager,1,1,0,3,Positive
+technical program manager ii,1,0,0,3,Positive
+technical support,0,0,0,3,Positive
+tpm ii,1,0,0,3,Positive
+transportation analyst,1,0,0,3,Positive
+undergraduate student,1,0,0,3,Positive
+vendor,1,0,0,3,Positive
+warehouse associate,1,2,1,2,Neutral
+warehouse packer,0,0,1,1,Negative

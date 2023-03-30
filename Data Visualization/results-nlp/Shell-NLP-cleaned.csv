@@ -1,0 +1,48 @@
+Job Title,Positive,Negative,Neutral,Total Score,Overall Sentiment
+Account manager,0,0,1,2,Neutral
+analyst,2,0,1,3,Positive
+"anonymous contractor	",0,1,0,1,Negative
+"anonymous employee	",4,0,2,3,Positive
+"business development manager	",1,0,1,3,Positive
+"commercial manager	",0,0,1,2,Neutral
+"commercial operations	",1,0,0,3,Positive
+"commercial operator	",1,0,0,3,Positive
+"component landscape manager	",0,0,0,3,Positive
+"customer service assistant	",0,0,1,2,Neutral
+"digitalization intern	",0,0,1,2,Neutral
+"ehs engineer	",1,0,0,3,Positive
+engineer,1,1,0,2,Neutral
+general manager,0,0,1,2,Neutral
+"global business development manager	",1,0,0,3,Positive
+"global project implementation executor	",1,0,0,3,Positive
+"hse engineer	",1,0,0,3,Positive
+"hse inspector	",1,0,0,3,Positive
+hsse advisor,0,0,2,2,Neutral
+inspection engineer,1,0,0,3,Positive
+"intern	",0,0,1,2,Neutral
+"internship	",0,0,0,3,Positive
+"it support specialist	",1,0,0,3,Positive
+"lab intern	",1,0,0,3,Positive
+"lab technician	",1,0,0,3,Positive
+laboratory,0,0,1,2,Neutral
+manager,3,0,0,3,Positive
+"master mariner ship captain	",1,0,0,3,Positive
+mechanical engineer,1,0,0,3,Positive
+"operations	",0,0,1,2,Neutral
+plant engineer intern,1,0,0,3,Positive
+process technician,1,0,0,3,Positive
+project manager,0,0,0,3,Positive
+"project services engineer	",0,0,1,2,Neutral
+"recruitment coordinator	",1,0,0,3,Positive
+"regional manager	",0,0,1,2,Neutral
+"regional technical manager	",0,0,1,2,Neutral
+"safety officer	",0,1,0,1,Negative
+seismic imaging geophysicist,0,0,1,2,Neutral
+"senior finance advisor	",1,0,0,3,Positive
+"senior manager	",0,0,1,2,Neutral
+"shift supervisor	",0,0,1,2,Neutral
+"supervisor	",1,0,0,3,Positive
+"team lead	",0,1,0,1,Negative
+"trader	",1,0,0,3,Positive
+"trader	",0,2,0,1,Negative
+"trading manager	",0,0,1,2,Neutral
