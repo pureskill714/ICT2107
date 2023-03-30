@@ -14,12 +14,26 @@ public class SentimentAnalysisReducerNLP extends Reducer<Text, Text, Text, Text>
         int sizeOfValues = 0;
         double averageSentiment;
         int finalizedSentiment;
+        int positiveSentimentCount = 0;
+        int neutralSentimentCount = 0;
+        int negativeSentimentCount = 0;
         String sentimentType;
         System.out.println("Values: "+values);
         for (Text value : values) {
             sizeOfValues++;
+            double convertedValue = Double.parseDouble(String.valueOf(value));
             //System.out.println("Value: "+value);
-            totalSentiment += Double.parseDouble(String.valueOf(value));
+            totalSentiment += convertedValue;
+            if(convertedValue == 1){
+                negativeSentimentCount++;
+            }
+            else if(convertedValue == 2){
+                neutralSentimentCount++;
+            }
+            else if(convertedValue == 3){
+                positiveSentimentCount++;
+            }
+
         }
         //System.out.println("Size of Values: "+ sizeOfValues);
         averageSentiment = Math.round(totalSentiment/sizeOfValues);
@@ -30,8 +44,8 @@ public class SentimentAnalysisReducerNLP extends Reducer<Text, Text, Text, Text>
         //System.out.println("Average Sentiment Round Up:"+Math.round(averageSentiment));
         sentimentType = getSentimentType(finalizedSentiment);
         System.out.println(sentimentType+" - "+finalizedSentiment);
-        System.out.println(key+" - "+"Overall Sentiment: "+ sentimentType+ " "+"Average Sentiment Score: "+finalizedSentiment);
-        context.write(key,new Text("Overall Sentiment: "+ sentimentType+ " "+"Average Sentiment Score: "+finalizedSentiment));
+        System.out.println(key+" - "+"Positive: "+positiveSentimentCount+" Neutral: "+neutralSentimentCount+" Negative: "+negativeSentimentCount+" Overall Sentiment: "+ sentimentType+ " "+"Average Sentiment Score: "+finalizedSentiment);
+        context.write(key,new Text("Positive: "+positiveSentimentCount+" Neutral: "+neutralSentimentCount+" Negative: "+negativeSentimentCount+" Overall Sentiment: "+ sentimentType+ " "+"Average Sentiment Score: "+finalizedSentiment));
 
     }
 
@@ -58,4 +72,5 @@ public class SentimentAnalysisReducerNLP extends Reducer<Text, Text, Text, Text>
         }
         return sentimentType;
     }
+
 }
