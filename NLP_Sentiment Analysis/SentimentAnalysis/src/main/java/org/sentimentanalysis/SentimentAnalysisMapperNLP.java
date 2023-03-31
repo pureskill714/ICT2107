@@ -37,12 +37,13 @@ public class SentimentAnalysisMapperNLP extends Mapper<Text,Text,Text,Text> {
     public void map(Text key, Text value, Context context) throws IOException, InterruptedException {
         //System.out.println("key: "+key);
         //System.out.println("value: "+value);
+        System.out.println(key+"-"+value);
         String line = value.toString().trim();
         //System.out.println("line: "+line);
         SentimentResult sentimentResult = new SentimentResult();
         sentimentResult = getSentimentResult(line);
         context.write(new Text(key), new Text(String.valueOf(sentimentResult.getSentimentScore())));
-        System.out.println(key+" "+sentimentResult.getSentimentScore());
+        //System.out.println(key+" "+sentimentResult.getSentimentScore());
         System.out.println(key+" - "+line+"\nScore: "+sentimentResult.getSentimentScore()+"\n"+"Type: "+sentimentResult.getSentimentType()+"\n"
                 +"Very Positive: "+sentimentResult.getSentimentClass().getVeryPositive()+"\n"+"Positive: "+sentimentResult.getSentimentClass().getPositive()+"\n"
                 + "Neutral: "+sentimentResult.getSentimentClass().getNeutral()+"\n"+"Negative: "+sentimentResult.getSentimentClass().getNegative()+"\n"
