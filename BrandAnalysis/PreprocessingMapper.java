@@ -1,4 +1,4 @@
-package BrandAnalysis;
+package org.example;
 
 import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
@@ -50,13 +50,13 @@ public class PreprocessingMapper extends Mapper<LongWritable, Text, Text, Text> 
         String pros = fields[4];
         String cons = fields[5];
         // Remove special characters
-        //summary = summary.replaceAll("[^a-zA-Z0-9 ]", "");    not used
+        summary = summary.replaceAll("[^a-zA-Z0-9 ]", "");
         jobTitle = jobTitle.replaceAll("[^a-zA-Z ]", " ");
         pros = pros.replaceAll("[^a-zA-Z ]", " ").trim();
         cons = cons.replaceAll("[^a-zA-Z ]", " ").trim();
         // Remove stop words
-        //String[] words = (summary + " " + jobTitle + " " + pros + " " + cons).toLowerCase().split("\\s+");    not used
-        String[] words = (pros + " " + cons).toLowerCase().split("\\s+");
+        String[] words = (summary + " " + pros + " " + cons).toLowerCase().split("\\s+");
+        //String[] words = (pros + " " + cons).toLowerCase().split("\\s+");
         StringBuilder sb = new StringBuilder();
         for (String word : words) {
             if (!stopWords.contains(word)) {
@@ -70,6 +70,6 @@ public class PreprocessingMapper extends Mapper<LongWritable, Text, Text, Text> 
         //debugging stuff
         //System.out.println(pros);
         //System.out.println(cons);
-        System.out.println("Cleaned" + cleanedText);
+        System.out.println(cleanedText);
     }
 }
