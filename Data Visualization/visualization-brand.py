@@ -55,11 +55,11 @@ else:
                    #getDataAsCsv=True)
 
         job_list = df['Company'].tolist()
-        count_list = df['Count'].tolist()
+        percentage_list = df['Overall Percentage'].tolist()
 
         # Create some data
         x = job_list
-        y = count_list
+        y = percentage_list
         # Create a bar chart
         fig = go.Figure(go.Bar(x=x, y=y))
         #ax.bar(x, y)
@@ -67,11 +67,17 @@ else:
         #ax.set_ylabel('Y-axis')
         #ax.set_title('Bar Graph')
 
+        fig.update_layout(
+            xaxis_title="Companies",
+            yaxis_title="Percentage (%)",
+            title="Percentage of employee reviews with brand synonyms"
+        )
         # Set the tickangle property of the x-axis to 0
         fig.update_xaxes(tickangle=0)
 
         # Display the chart using Streamlit
         st.plotly_chart(fig)
+
 
         # Display the chart using Streamlit
         #st.pyplot(fig)
