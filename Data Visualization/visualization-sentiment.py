@@ -13,11 +13,11 @@ global df
 
 # Page Configs
 st.set_page_config(
-    page_title="Data Visualization",
+    page_title="Data Visualization For Sentiment Analysis",
     page_icon="🐠",
 )
 
-st.title("📊 Data Visualization 📊")
+st.title("Data Visualization For Sentiment Analysis")
 st.sidebar.info("This page allows visualize the data from your csv files")
 csv_path = "results-nlp"
 container1 = st.empty()
